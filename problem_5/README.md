@@ -5,7 +5,11 @@ What is the smallest positive number that is evenly divisible by all of the numb
 
 ## Tests
 `smallestMult(5)` should return `60`
+
 `smallestMult(7)` should return `420`
+
 `smallestMult(10)` should return `2520`
+
 `smallestMult(13)` should return `360360`
+
 `smallestMult(20)` should return `232792560`

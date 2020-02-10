@@ -12,3 +12,4 @@ Project Euler (pronounced Oiler) is a series of challenging mathematical/compute
 5. [Problem 5: Smallest multiple](problem_5/)
 6. [Problem 6: Sum square difference](problem_6/)
 7. [Problem 7: 10001st prime](problem_7/)
+8. [Problem 8: Largest product in a series](problem_8/)

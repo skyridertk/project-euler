@@ -1,6 +1,6 @@
 def specialPythagoreanTriplet(n):
  sumOfabc = n
  
- return true
+ return True
 
 print(specialPythagoreanTriplet(1000))

@@ -15,3 +15,4 @@ Project Euler (pronounced Oiler) is a series of challenging mathematical/compute
 8. [Problem 8: Largest product in a series](problem_8/)
 9. [Problem 9: Special Pythagorean triplet](problem_9/)
 10. [Problem 10: Summation of primes](problem_10/)
+11. [Problem 11: Largest product in a grid](problem_11/)

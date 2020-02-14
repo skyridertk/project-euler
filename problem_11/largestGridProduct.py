@@ -1,4 +1,17 @@
 def largestGridProduct(arr):
+  #straights
+  max_len = len(arr[0])
+  loops = max_len - 4
+
+  for i in range(0, loops+1):
+
+    for arrays in arr:
+      print(arrays)
+      for j in range(i, i+4):
+        print()
+
+    print('-----')
+  #diagonals
   
   return arr
 

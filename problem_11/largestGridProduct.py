@@ -1,20 +1,87 @@
 def largestGridProduct(arr):
-  #straights
-  max_len = len(arr[0])
-  loops = max_len - 4
+  max_straights = straights(arr)
+  max_reverse = reverse_diagonals(arr)
+  max_diagonals = diagonals(arr)
 
-  for i in range(0, loops+1):
+  #print("{0} {1} {2}".format(max_straights, max_reverse, max_diagonals))
 
-    for arrays in arr:
-      print(arrays)
-      for j in range(i, i+4):
-        print()
+  return max(max_diagonals, max_reverse, max_reverse)
 
-    print('-----')
-  #diagonals
+def straights(arr):
+  max_product = 0
+  i_index = 0
+  for i in arr:
+    arr_size = len(i)
+    start = 0
+    end = start+4
+
+    
+    while end <= arr_size:
+      current_product = 1
+      while start<end:
+        #print("{0} {1}".format(i_index, start))
+        current_product *= arr[i_index][start]
+        start+=1
+
+      if(current_product > max_product):
+        max_product = current_product
+
+      end+=1
+      start= end -4
+
+    #print('---- {0}'.format(max_product))
+    i_index += 1
+  return max_product
+
+def diagonals(arr):
+  max_product = 0
+
+  i_index = 0
+  for i in arr:
+    arr_size = len(i)
+    
+
+    if(arr_size - i_index >= 4):
+      for num in range(arr_size):
+        start = 0
+        end = start+4
+        
+        while end <= arr_size:
+          current_product = 1
+          while start<end:
+            if(i_index+start >= arr_size):
+              break
+            elif (start+num>=arr_size):
+              break  
+
+            #print("{0} {1} {2}".format(i_index+start, start+num, num))
+            current_product *= arr[i_index+start][start+num]
+            start+=1
+
+          #print('+++ {0}'.format(max_product))
+          if(current_product > max_product):
+            max_product = current_product
+
+          end+=1
+          start= end -4
+
+    
+    i_index += 1
+  return max_product
+
+def reverse_diagonals(arr):
   
-  return arr
+  my_arr = []
+  for inner_arr in arr:
+    temp_arr = []
+    for j in inner_arr:
+      temp_arr.insert(0, j)
+    my_arr.append(temp_arr)
+    
 
+  max_product = diagonals(my_arr)
+
+  return max_product
 ## Only change code above this line
 grid = [
   [8, 2, 22, 97, 38, 15, 0, 40, 0, 75, 4, 5, 7, 78, 52, 12, 50, 77, 91, 8],
@@ -47,4 +114,4 @@ testGrid = [
   [7, 97, 57, 32, 16]
 ]
 
-print(largestGridProduct(testGrid))
+print(largestGridProduct(grid))

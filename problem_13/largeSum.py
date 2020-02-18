@@ -1,7 +1,9 @@
 def largeSum(arr):
-  
-  return True
+  values = 0
 
+  for i in arr:
+    values+= int(i)
+  return str(values)[:10]
 
 #  only change code above this line
 

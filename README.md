@@ -18,3 +18,4 @@ Project Euler (pronounced Oiler) is a series of challenging mathematical/compute
 11. [Problem 11: Largest product in a grid](problem_11/)
 12. [Problem 12: Highly divisible triangular number](problem_12/)
 13. [Problem 13: Large sum](problem_13/)
+14. [Problem 14: Longest Collatz sequence](problem_14/)

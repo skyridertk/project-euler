@@ -3,6 +3,9 @@ Project Euler (pronounced Oiler) is a series of challenging mathematical/compute
 
 > The problems range in difficulty and for many the experience is inductive chain learning. That is, by solving one problem it will expose you to a new concept that allows you to undertake a previously inaccessible problem.
 > Although mathematics will help you arrive at elegant and efficient methods, the use of a computer and programming skills will be required to solve most problems.
+> 
+## Language
+[ - ] Python 3.7.3
 
 ## List of problems
 1. [Problem 1: Multiples of 3 and 5](problem_1/)

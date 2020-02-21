@@ -1,10 +1,17 @@
 def latticePaths(gridSize):
   vertices = []
-  count_modifications = 0
+  terminating_vertices = []
+  path = 0
 
   for i in range(gridSize+1):
-    for k in range(gridSize+1):
-      vertices.append([i, k])
+    vertices.append([0, i])
+    terminating_vertices.append([i, 0])
+
+  for j in range(1, gridSize+1):
+    vertices.append([j, vertices[len(vertices)-1][1]])
+    terminating_vertices.append([vertices[len(vertices)-1][1], j])
+
+  path += 2
 
   '''
   break_point = False
@@ -25,6 +32,7 @@ def latticePaths(gridSize):
       stages += 1
   '''
   print(vertices)
+  print(terminating_vertices)
   #00
   #01
   #02 x
@@ -64,4 +72,4 @@ def latticePaths(gridSize):
   return True
 
 
-print(latticePaths(4))
+print(latticePaths(3))

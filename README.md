@@ -24,3 +24,4 @@ Project Euler (pronounced Oiler) is a series of challenging mathematical/compute
 14. [Problem 14: Longest Collatz sequence](problem_14/)
 15. [Problem 15: Lattice paths](problem_15/)
 16. [Problem 16: Power digit sum](problem_16/)
+17. [Problem 17: Number letter counts](problem_17/)
